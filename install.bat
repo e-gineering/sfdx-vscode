@@ -12,8 +12,8 @@ rem Create the folder
 set "folder_path=%location%\%folder_name%"
 mkdir "%folder_path%"
 
-rem Copy the .devcontainer folder and its contents
-xcopy /E /I ".\.devcontainer" "%folder_path%\.devcontainer"
+rem Copy the devcontainer folder and its contents
+xcopy /E /I ".\devcontainer" "%folder_path%\.devcontainer"
 
 echo.
 echo Folder '%folder_name%' created at '%location%'.

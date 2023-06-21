@@ -11,7 +11,7 @@ folder_path="${location}/${folder_name}"
 mkdir -p "${folder_path}"
 
 # Copy the .devcontainer folder and its contents
-devcontainer_src=$(realpath .devcontainer)
+devcontainer_src=$(realpath devcontainer)
 devcontainer_dest="${folder_path}/.devcontainer"
 cp -r "${devcontainer_src}" "${devcontainer_dest}"
 
