@@ -1,16 +1,18 @@
 #!/bin/bash
 
-function dx-open() {
-    if [ $# -ne 1 ]
-    then
-        sfdx open org
-    else
-        sfdx open org --target-org="$1"
-    fi
-}
+function dx-clean() {
+    tools_dir=$(find /workspaces -type d -path "*sfdx/tools")
 
-function dx-list() {
-    sfdx org list
+    if [ -z "$tools_dir" ]
+    then
+        echo "Unable to find tools directory"
+    else
+        while IFS= read -r line
+		do
+			rm -f "$line"/debug/logs/*.log
+			rm -f "$line"/testresults/apex/*.json
+		done <<< "$tools_dir"
+    fi
 }
 
 function dx-details() {
@@ -22,14 +24,16 @@ function dx-details() {
     fi
 }
 
-function dx-clean() {
-    tools_dir=$(find /workspaces -type d -path "*sfdx/tools")
+function dx-list() {
+    sfdx org list
+}
 
-    if [ -z "$tools_dir" ]
+function dx-open() {
+    if [ $# -ne 1 ]
     then
-        echo "Unable to find tools directory"
+        sfdx open org
     else
-        while IFS= read -r line ; do "rm $line/debug/logs/*.log; rm $line/testresults/apex/*.json"; done <<< "$tools_dir"
+        sfdx open org --target-org="$1"
     fi
 }
 
