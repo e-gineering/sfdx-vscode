@@ -22,7 +22,3 @@ Once the extensions have been installed, the `SFDX: Create Project` command can 
 The list of currently connected orgs can be viewed using the terminal command `dx-list`. In order to connect to a dev hub, the command `SFDX: Authorize a Dev Hub` can be used from the command bar.
 
 In order to connect to a sandbox, from the terminal, use the `sfdx org login device` command and follow the prompts to set up the sandbox connection.
-
-## Opening a SF org using dx-open
-
-One drawback of using the dev container is that you cannot directly open orgs in the browser using `sfdx org open` (or `dx-open`). Instead, you will get a warning that you are in a headless environment, and there will be a link to the org at the end of the message. You should be able to ctrl/cmd + click the link to open in your default browser.

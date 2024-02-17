@@ -22,5 +22,12 @@
 				"eamodio.gitlens"
 			]
 		}
+	},
+
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			// So vscode can open links in the browser
+			"packages": "xdg-utils"
+		}
 	}
 }
