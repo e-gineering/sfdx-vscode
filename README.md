@@ -25,4 +25,4 @@ In order to connect to a sandbox, from the terminal, use the `sfdx org login dev
 
 ## Opening a SF org using dx-open
 
-One drawback of using the dev container is that you cannot directly open orgs in the browser using `sfdx org open` (or `dx-open`). Instead, you will get a warning that you are in a headless environment, and there will be a link to the org at the end of the message. You should be able to ctrl/cmd + click the link to open in your default browser.
+One drawback of using the dev container is that you cannot directly open orgs in the browser using `sf org open` (or `dx-open`). Instead, you will get a warning that you are in a headless environment, and there will be a link to the org at the end of the message. You should be able to ctrl/cmd + click the link to open in your default browser.
